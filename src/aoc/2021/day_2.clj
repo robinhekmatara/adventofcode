@@ -20,6 +20,8 @@
    (map (fn [[s1 s2]] [s1 (Integer/parseInt s2)]))))
 
 (comment
-  (end-position slurp-file-to-list))
+  slurp-file-to-list
+  (end-position slurp-file-to-list)
+  )
 
 
