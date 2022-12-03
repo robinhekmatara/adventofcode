@@ -1,6 +1,5 @@
 (ns aoc.2022.day-2
-  (:require [clojure.string :as str]
-            [clojure.string :as string]))
+  (:require [clojure.string :as str]))
 
 (def rock "rock")
 (def paper "paper")
@@ -72,8 +71,8 @@
 
 (defn clean-data
   [data]
-  (->> (string/split data #"\n")
-       (map (fn [game-move] (string/split game-move #" ")))
+  (->> (str/split data #"\n")
+       (map (fn [game-move] (str/split game-move #" ")))
        (map (fn [game-move] {:opponent-shape (opponent-shape (nth game-move 0))
                              :outcome (outcome (nth game-move 1))}))))
 
